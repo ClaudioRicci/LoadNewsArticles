@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography Tests ArticleTitle Tests ArticleTitle has a cursor pointer to denote a link 1`] = `
+.c0 {
+  font: 900 0.84em/0.84rem Verdana,Arial,Helvetica,sans-serif;
+  color: #5D5D5D;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+<a
+  className="c0"
+/>
+`;
+
+exports[`Typography Tests ArticleTitle Tests ArticleTitle is secondary colour 1`] = `
+.c0 {
+  font: 900 0.84em/0.84rem Verdana,Arial,Helvetica,sans-serif;
+  color: #5D5D5D;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+<a
+  className="c0"
+/>
+`;
+
+exports[`Typography Tests H1Tag Tests H1 is primary colour 1`] = `
+.c0 {
+  font: 900 1em/1rem Verdana,Arial,Helvetica,sans-serif;
+  color: #D9819D;
+  text-align: left;
+  border-bottom: 0.2rem #D9819D solid;
+  padding-bottom: 0.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  grid-area: a;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
+  }
+}
+
+<h1
+  className="c0"
+/>
+`;
+
+exports[`Typography Tests H2Tag Tests H1 is secondary colour 1`] = `
+.c0 {
+  font: 900 0.8em/0.8rem Verdana,Arial,Helvetica,sans-serif;
+  color: #5D5D5D;
+  line-height: 1rem;
+}
+
+<h2
+  className="c0"
+/>
+`;
+
+exports[`Typography Tests PTag Tests PTag has 1rem line-height 1`] = `
+.c0 {
+  line-height: 1rem;
+}
+
+<p
+  className="c0"
+/>
+`;
