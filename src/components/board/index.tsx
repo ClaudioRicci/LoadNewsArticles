@@ -33,6 +33,10 @@ function Board() {
     setValue(event.currentTarget.value);
   };
 
+  const loadMoreArticles = () => {
+    setArticlesCount(articlesCount + 5);
+  };
+
   useEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
@@ -111,6 +115,12 @@ function Board() {
               );
             })}
           </ULTag>
+          <ShowMoreButton
+            disabled={!loaded || articlesCount >= items.length}
+            onClick={loadMoreArticles}
+          >
+            {loaded ? "Show More" : "Loading..."}
+          </ShowMoreButton>
         </main>
       </BoardSurround>
     );
