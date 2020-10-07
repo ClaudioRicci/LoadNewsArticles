@@ -12,6 +12,7 @@ import {
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { pure } from "recompose";
+import { useMediaQuery } from "react-responsive";
 
 interface IDropDownProps {
   id: any;
@@ -32,6 +33,18 @@ function Board() {
   const handleSelect = (event: any) => {
     setValue(event.currentTarget.value);
   };
+
+  const loadMoreArticles = () => {
+    setArticlesCount(articlesCount + 5);
+  };
+
+  const goBack = () => {
+    setArticlesCount(0);
+  };
+
+  const isMobile = useMediaQuery({
+    query: "(max-device-width: 768px)"
+  });
 
   useEffect(() => {
     if (firstUpdate.current) {
@@ -65,13 +78,32 @@ function Board() {
 
   if (loaded) {
     return (
-      <BoardSurround>
-        <main className="selectSurround" data-testid="selectSurround">
+      <main className="selectSurround">
+        <BoardSurround>
           <Header>
             <H1Tag data-testid="title">
               {error ? "Unable to load data" : "News"}
             </H1Tag>
-
+            {isMobile &&
+              (articlesCount < items.length ? (
+                <ShowMoreButton
+                  disabled={!loaded || articlesCount >= items.length}
+                  onClick={loadMoreArticles}
+                >
+                  {loaded ? "Show More" : "Loading..."}
+                </ShowMoreButton>
+              ) : (
+                <>
+                  <div className="noMoreArticles">
+                    <H2Tag data-testid="noMoreArticlesTitle">
+                      {error ? "Unable to load data" : "No more articles"}
+                    </H2Tag>
+                  </div>
+                  <ShowMoreButton disabled={!loaded} onClick={goBack}>
+                    {loaded ? "Back to start" : "Loading..."}
+                  </ShowMoreButton>
+                </>
+              ))}
             <Select
               className="selectSurround"
               data-testid="select"
@@ -111,8 +143,26 @@ function Board() {
               );
             })}
           </ULTag>
-        </main>
-      </BoardSurround>
+          {!isMobile &&
+            (articlesCount < items.length ? (
+              <ShowMoreButton
+                disabled={!loaded || articlesCount >= items.length}
+                onClick={loadMoreArticles}
+              >
+                {loaded ? "Show More" : "Loading..."}
+              </ShowMoreButton>
+            ) : (
+              <>
+                <H2Tag data-testid="noMoreArticlesTitle">
+                  {error ? "Unable to load data" : "No more articles"}
+                </H2Tag>
+                <ShowMoreButton disabled={!loaded} onClick={goBack}>
+                  {loaded ? "Back to start" : "Loading..."}
+                </ShowMoreButton>
+              </>
+            ))}
+        </BoardSurround>
+      </main>
     );
   } else {
     return (
