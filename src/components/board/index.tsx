@@ -37,6 +37,10 @@ function Board() {
     setArticlesCount(articlesCount + 5);
   };
 
+  const goBack = () => {
+    setArticlesCount(0);
+  };
+
   useEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
@@ -115,12 +119,24 @@ function Board() {
               );
             })}
           </ULTag>
-          <ShowMoreButton
-            disabled={!loaded || articlesCount >= items.length}
-            onClick={loadMoreArticles}
-          >
-            {loaded ? "Show More" : "Loading..."}
-          </ShowMoreButton>
+
+          {articlesCount < items.length ? (
+            <ShowMoreButton
+              disabled={!loaded || articlesCount >= items.length}
+              onClick={loadMoreArticles}
+            >
+              {loaded ? "Show More" : "Loading..."}
+            </ShowMoreButton>
+          ) : (
+            <>
+              <H2Tag data-testid="noMoreArticlesTitle">
+                {error ? "Unable to load data" : "No more articles"}
+              </H2Tag>
+              <ShowMoreButton disabled={!loaded} onClick={goBack}>
+                {loaded ? "Back to start" : "Loading..."}
+              </ShowMoreButton>
+            </>
+          )}
         </main>
       </BoardSurround>
     );
