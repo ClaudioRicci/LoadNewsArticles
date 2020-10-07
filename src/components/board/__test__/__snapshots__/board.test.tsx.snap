@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title Tests H1 Renders Correctly 1`] = `
+.c0 {
+  font: 900 1em/1rem Verdana,Arial,Helvetica,sans-serif;
+  color: #D9819D;
+  text-align: left;
+  border-bottom: 0.2rem #D9819D solid;
+  padding-bottom: 0.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  grid-area: a;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
+  }
+}
+
+<h1
+  className="c0"
+/>
+`;

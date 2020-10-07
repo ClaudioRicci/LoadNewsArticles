@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dom Element Tests BoardSurround Tests BoardSurround to be 30rem wide by default 1`] = `
+.c0 {
+  text-align: left;
+  width: 30rem;
+  height: 100rem;
+  padding: 1.6rem 1.6rem 0.5rem;
+  margin: 0 auto;
+  background: #F1F1F1;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 90%;
+    height: 46rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests Date Tests Date is secondary colour (#5D5D5D - Dark Grey) 1`] = `
+.c0 {
+  font: 400 0.74em/0.74rem Arial,Helvetica,sans-serif;
+  color: #5D5D5D;
+  padding: 0.1rem 0.5rem 0.1rem 0;
+  text-align: left;
+  width: 4rem;
+}
+
+<span
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests Header Tests Header should display as grid by default 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: 2rem;
+  grid-template-areas: "a b";
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests LITag Tests LITag should have a grey border (#9C9C9C) under each item 1`] = `
+.c0 {
+  margin: 0;
+  padding: 1rem 0 0;
+  border-bottom: 0.1rem #9C9C9C solid;
+}
+
+<li
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests Select Tests Select is ternary colour (#9C9C9C - Light Grey) 1`] = `
+.c0 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 2rem;
+  background: #FFF;
+  color: #9C9C9C;
+  border: 0.2rem #9C9C9C solid;
+  border-radius: 0.3rem;
+  padding-left: 1rem;
+  grid-area: b;
+  justify-self: end;
+}
+
+.c0 option {
+  color: #9C9C9C;
+  background: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: pre;
+  min-height: 1.6rem;
+  padding: 0.1rem 0.2rem;
+  font: 900 0.8rem/0.8rem Arial,Helvetica,sans-serif;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    width: 11rem;
+    height: 2.6rem;
+    position: relative;
+    top: 4rem;
+    grid-area: a;
+    justify-self: start;
+  }
+}
+
+<select
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests ShowMoreButton Tests ShowMoreButton should be smaller for Mobile (Device Width 768px or smaller) 1`] = `
+.c0 {
+  background: #FFF;
+  border: 0.2rem #D9819D solid;
+  color: #D9819D;
+  cursor: pointer;
+  display: inline-grid;
+  font: 900 0.8rem/1rem Verdana,Arial,Helvetica,sans-serif;
+  margin: 1rem auto;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.c0:hover {
+  border: 0.2rem #f9b600 solid;
+  color: #f9b600;
+  opacity: 0.85;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    width: 6.4rem;
+    left: 13.6rem;
+    position: absolute;
+    top: 4.7rem;
+  }
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests ShowMoreButton Tests ShowMoreButton should have pointer to denote it can be pressed 1`] = `
+.c0 {
+  background: #FFF;
+  border: 0.2rem #D9819D solid;
+  color: #D9819D;
+  cursor: pointer;
+  display: inline-grid;
+  font: 900 0.8rem/1rem Verdana,Arial,Helvetica,sans-serif;
+  margin: 1rem auto;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.c0:hover {
+  border: 0.2rem #f9b600 solid;
+  color: #f9b600;
+  opacity: 0.85;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    width: 6.4rem;
+    left: 13.6rem;
+    position: absolute;
+    top: 4.7rem;
+  }
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests ShowMoreButton Tests ShowMoreButton should turn orange (#f9b600) when hovered 1`] = `
+.c0 {
+  background: #FFF;
+  border: 0.2rem #D9819D solid;
+  color: #D9819D;
+  cursor: pointer;
+  display: inline-grid;
+  font: 900 0.8rem/1rem Verdana,Arial,Helvetica,sans-serif;
+  margin: 1rem auto;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.c0:hover {
+  border: 0.2rem #f9b600 solid;
+  color: #f9b600;
+  opacity: 0.85;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    width: 6.4rem;
+    left: 13.6rem;
+    position: absolute;
+    top: 4.7rem;
+  }
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests Source Tests Source is white colour (#FFF) 1`] = `
+.c0 {
+  font: 400 0.74em/0.74rem Arial,Helvetica,sans-serif;
+  background: #9C9C9C;
+  color: #FFF;
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1rem;
+}
+
+<span
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests ULTag Tests ULTag should have list-style none 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    margin-top: 4rem;
+  }
+}
+
+<ul
+  className="c0"
+/>
+`;
+
+exports[`Dom Element Tests ULTag Tests ULTag should have margin-top when mobile (Device Width 768px or smaller) 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    margin-top: 4rem;
+  }
+}
+
+<ul
+  className="c0"
+/>
+`;
