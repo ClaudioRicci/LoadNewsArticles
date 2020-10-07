@@ -11,10 +11,10 @@ import { shallow } from "enzyme";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
-Enzyme.configure({ adapter: new Adapter() });
-
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
+
+Enzyme.configure({ adapter: new Adapter() });
 
 afterEach(cleanup);
 

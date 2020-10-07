@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Title Tests H1 Renders Correctly 1`] = `
+exports[`Title Tests H1 Renders Correctly in Primary colour (#D9819D) 1`] = `
 .c0 {
   font: 900 1em/1rem Verdana,Arial,Helvetica,sans-serif;
   color: #D9819D;
