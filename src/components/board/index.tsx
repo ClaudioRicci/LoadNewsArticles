@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import LoadingCircle from "../loadingCircle";
+import NewsArticle from "../newsArticle";
 import { H1Tag, H2Tag } from "../typography";
 import {
   BoardSurround,
@@ -25,6 +26,7 @@ function Board() {
   const [uniqueSources, setUniqueSources] = useState<any | null>([]);
   const [value, setValue] = useState<string>("Filter by Source");
   const [error, setError] = useState<boolean>(false);
+  const [articlesCount, setArticlesCount] = useState<number>(0);
   let index = uuidv4();
 
   const handleSelect = (event: any) => {
@@ -84,6 +86,31 @@ function Board() {
               ))}
             </Select>
           </Header>
+          <ULTag>
+            {items.slice(articlesCount, articlesCount + 5).map((item: any) => {
+              let { id, name, title, publishedAt, url, index = [] }: any = item;
+              let articleSources: any = [];
+
+              Object.entries(sources).forEach((entries: any) => {
+                articleSources.push(entries[1].name);
+                for (let i = 0; i < items.length; i++) {
+                  index.push(i);
+                }
+              });
+
+              return (
+                <NewsArticle
+                  id={id}
+                  name={name}
+                  title={title}
+                  publishedAt={publishedAt}
+                  url={url}
+                  source={sources}
+                  articleSources={articleSources[0]}
+                />
+              );
+            })}
+          </ULTag>
         </main>
       </BoardSurround>
     );
