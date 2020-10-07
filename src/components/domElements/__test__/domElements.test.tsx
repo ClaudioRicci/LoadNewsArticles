@@ -10,7 +10,7 @@ import {
   Source,
   Select
 } from "../index";
-import { colors, fonts, align, deviceSizes } from "../../../themeVariables";
+import { colors, deviceSizes } from "../../../themeVariables";
 import renderer from "react-test-renderer";
 import "jest-styled-components";
 import { render, cleanup } from "@testing-library/react";

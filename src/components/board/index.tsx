@@ -13,6 +13,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { pure } from "recompose";
 import { useMediaQuery } from "react-responsive";
+import "./styles/board.scss";
 
 interface IDropDownProps {
   id: any;
@@ -79,6 +80,7 @@ function Board() {
   if (loaded) {
     return (
       <main className="selectSurround">
+        <div className="test">OK</div>
         <BoardSurround>
           <Header>
             <H1Tag data-testid="title">
