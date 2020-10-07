@@ -4,7 +4,6 @@ import Board from "..";
 import { H1Tag } from "../../typography";
 import { colors } from "../../../themeVariables";
 import renderer from "react-test-renderer";
-// import { expect } from "chai";
 import { shallow } from "enzyme";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";

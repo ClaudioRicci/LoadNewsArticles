@@ -80,7 +80,6 @@ function Board() {
   if (loaded) {
     return (
       <main className="selectSurround">
-        <div className="test">OK</div>
         <BoardSurround>
           <Header>
             <H1Tag data-testid="title">
