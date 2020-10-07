@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import LoadingCircle from "../loadingCircle";
+import { BoardSurround } from "../domElements";
 import { pure } from "recompose";
 
 function Board() {
@@ -7,12 +9,20 @@ function Board() {
 
   if (loaded) {
     return (
-      <main className="selectSurround" data-testid="selectSurround">
-        <p>Loaded content here</p>
-      </main>
+      <BoardSurround>
+        <main className="selectSurround" data-testid="selectSurround">
+          <p>Loaded content here</p>
+        </main>
+      </BoardSurround>
     );
   } else {
-    return <p>Loading...</p>;
+    return (
+      <BoardSurround>
+        <main data-testid="loadingCircle">
+          <LoadingCircle />
+        </main>
+      </BoardSurround>
+    );
   }
 }
 
